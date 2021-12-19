@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire de Contacts</title>
+</head>
+
+<body>
+    <div class="contenu">
+        <span class="titre">Formulaire de Contacts</span>
+        <form name="formulaire" action="contacts.html" method="post" id="formulaire">
+            <p class="image"><img src="users.png" alt="" id="profil"></p>
+            <p id="nom_user">Nom d'utilisateur</p>
+            <p class="informations">
+                <label for="prenom">Prénom</label><em>*Obligatoire</em><br>
+                <input type="text" name="prenom" id="prenom" placeholder="Donnez votre prénom" required><small></small><br><br>
+                <label for="nom">Nom</label><em>*Obligatoire</em><br>
+                <input type="text" id="nom" name="nom" placeholder="Donnez votre nom" required><small></small><br><br>
+                <label for="telephone">Tel</label><em>*Obligatoire</em><br>
+                <input type="tel" name="telephone" id="telephone" minlength="9" maxlength="12" placeholder="Ex=(221) 77 777 77 77" required><small></small><br><br>
+                <label for="adresse">Adresse</label><em>*Obligatoire</em><br>
+                <input type="text" name="adresse" id="adresse" placeholder="Renseignez votre dresse" required><small></small><br><br>
+            </p>
+
+            <p class="profil">
+                <label for="file">Choisir une photo</label><br>
+                <input type="file" name="file" id="file" placeholder="Choisir un fichier" required>
+            </p>
+            <p class="list" id="listeContacts">
+                <a href="contacts.html">Liste des contacts</a>
+            </p>
+            <p class="submit">
+                <button class="btn" id="btn">Envoyer</button>
+            </p>
+        </form>
+        <footer>
+            <p>Pour plus d'informations, contactez nous!!!!</p>
+        </footer>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>

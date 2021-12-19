@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire de Contact</title>
+</head>
+    
+<body>
+
+    <div class="container">
+        <div class="titre">
+            <p>Formulaire de Contact</p>
+        </div>
+        <form name="formulaire" action="" method="post" id="formulaire">
+            <div class="informationsPersonnelle">
+                <p>
+                    <label for="prenom">Entez votre nom  complet</label><br>
+                    <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                    <input type="text" name="nom" placeholder="Nom de famille" required><br><br>
+                    <label for="age">Entrez votre âge</label><br>
+                    <input type="number" name="age" id="age" max="150" min="10" placeholder="Âge" required><br><br>
+                    <label for="adresse">Entez votre adresse</label><br>
+                    <input type="text" name="adresse" id="adresse" placeholder="Adresse" required><br><br>
+                    <label for="telephone">Telephone</label><br>
+                    <input type="tel" name="telephone" id="telephone" maxlength="9" placeholder="Numéro de téléphone" required>
+                    <small></small><br>
+                </p>
+            </div>
+            <div class="divers">
+                <p class="langues">
+                    <span>Langue parlé</span><br><br>
+                    <input type="checkbox" name="langue" id="français" value="français">
+                    <label for="français">Français</label><br>
+                    <input type="checkbox" name="langue" id="anglais" value="anglais">
+                    <label for="anglais">Anglais</label><br>
+                    <input type="checkbox" name="langue" id="portugais" value="portugais">
+                    <label for="portugais">Portugais</label><br>
+                    <input type="checkbox" name="langue" id="espagnol" value="espagnol">
+                    <label for="espagnol">Espagnol</label><br>
+                </p>
+                <p>
+                    <span>Êtes-vous salarié ?</span><br><br>
+                    <input type="radio" name="salaire" id="oui" required>OUI<br>
+                    <input type="radio" name="salaire" id="non" required>NON<br>
+                </p>
+            </div>
+            <input type="submit" value="Soumettre" class="soumettre">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

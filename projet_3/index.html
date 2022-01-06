@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire de Contact</title>
+</head>
+<body>
+    <header>
+        FORMULAIRE DE CONTACTS
+    </header>
+    <main>
+        <form action="post" style="background-color: red; width: 100%;">
+            <section class="top-section">
+                <section class="formulaire-section">
+                    <div class="field">
+                        <label for="prenom">Prenom <span id="obl-prenom"></span> </label>
+                        <input type="text" name="prenom" id="prenom">
+                    </div>
+                    <div class="field">
+                        <label for="nom">Nom <span id="obl-nom"></span> </label>
+                        <input type="text" name="prenom" id="nom">
+                    </div>
+                    <div class="field">
+                        <label for="tel">Telephone <span id="obl-tel"></span> </label>
+                        <input type="text" name="tel" id="tel">
+                    </div>
+                    <div class="field">
+                        <label for="adresse">Adresse <span id="obl-adresse"></span> </label>
+                        <input type="text" name="adresse" id="adresse">
+                    </div>
+                    <div class="field">
+                        <label for="avatar">Choisir une photo </label>
+                        <input type="file" name="avatar" id="avatar">
+                    </div>
+                </section>
+                <section class="avatar-section">
+                    <div>
+                        <img src="img/avatar.png" alt="avatar">
+                       <span>Avatar</span>
+                    </div>
+                    <button>Liste des contacts</button>
+                </section>
+            </section>
+            <section class="bottom-section">
+                <button type="submit"> ENVOYER</button>
+            </section>
+        </form>
+        
+    </main>
+    <footer>
+        Pour plus d'informations, veuillez nous contacter !!!
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

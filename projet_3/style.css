@@ -40,8 +40,128 @@ main{
     background-color: #DBBE96;
     height: 100vh;
     margin: 0 auto;
+    padding: 5vh;
 }
 
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.bottom-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh auto;
+    background-color: #ffffff;
+    width: 70%;
+}
+.formulaire-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 4vh;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6F5127;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #C88B31;
+    background: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+input:focus{
+    outline: 2px solid #C88B31;
+    box-shadow: inset 0 1px 1px rgba(224, 219, 219, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+
+}
+
+.avatar-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30vh;
+    margin-top: 10px;
+}
+
+.envoyer-button{
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+    color: #C88B31;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #C88B31;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#obl-prenom{
+    font-size: 15px;
+    color: red;
+}
+#list-button{
+    background-color: #258DC8;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+#list-button:hover{
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.2);
+}
+#avatar{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    color: #ffffff;
+}
+
+#photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.avatar-div{
+    width: 200px;
+    height: 200px;
+    background-color: #6F5127;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 50%;
+}
+
+.photo-title{
+    position: absolute;
+    bottom:-5vh;
+    color: #6F5127;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 @media screen and (max-width: 1068px) {
     body{

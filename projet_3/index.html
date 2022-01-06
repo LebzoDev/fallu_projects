@@ -12,40 +12,44 @@
         FORMULAIRE DE CONTACTS
     </header>
     <main>
-        <form action="post" style="background-color: red; width: 100%;">
+        <form action="post" id="form">
+            
             <section class="top-section">
                 <section class="formulaire-section">
                     <div class="field">
-                        <label for="prenom">Prenom <span id="obl-prenom"></span> </label>
-                        <input type="text" name="prenom" id="prenom">
+                        <label for="prenom">Prenom: <span id="obl-prenom">*Obligatoire</span> </label>
+                        <input type="text" placeholder="Donner un prenom" name="prenom" id="prenom">
                     </div>
                     <div class="field">
-                        <label for="nom">Nom <span id="obl-nom"></span> </label>
-                        <input type="text" name="prenom" id="nom">
+                        <label for="nom">Nom : <span id="obl-nom"></span> </label>
+                        <input type="text" placeholder="Donner un nom" name="prenom" id="nom">
                     </div>
                     <div class="field">
-                        <label for="tel">Telephone <span id="obl-tel"></span> </label>
-                        <input type="text" name="tel" id="tel">
+                        <label for="tel">Telephone :<span id="obl-tel"></span> </label>
+                        <input type="text" placeholder="Donner un numero Tel" name="tel" id="tel">
                     </div>
                     <div class="field">
-                        <label for="adresse">Adresse <span id="obl-adresse"></span> </label>
-                        <input type="text" name="adresse" id="adresse">
+                        <label for="adresse">Adresse:<span id="obl-adresse"></span> </label>
+                        <input type="text" placeholder="Donner une adresse" name="adresse" id="adresse">
                     </div>
                     <div class="field">
-                        <label for="avatar">Choisir une photo </label>
-                        <input type="file" name="avatar" id="avatar">
+                        <label for="avatar">Choisir une photo: </label>
+                        <input type="file" onchange="document.getElementById('photo').src = window.URL.createObjectURL(this.files[0])" name="avatar" id="avatar">
                     </div>
                 </section>
+                
                 <section class="avatar-section">
-                    <div>
-                        <img src="img/avatar.png" alt="avatar">
-                       <span>Avatar</span>
+                    <div class="avatar-div">
+                        <img  id="photo" src="img/avatar.png" alt="none">
+                        <span class="photo-title">PHOTO</span>
                     </div>
-                    <button>Liste des contacts</button>
+                   
+                    <button type="button" id="list-button">Liste des contacts</button>
                 </section>
             </section>
+
             <section class="bottom-section">
-                <button type="submit"> ENVOYER</button>
+                <button class="envoyer-button" type="submit"> ENVOYER</button>
             </section>
         </form>
         

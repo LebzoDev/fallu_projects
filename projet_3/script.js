@@ -1,4 +1,14 @@
-// const jsonData= require('./tableau.json'); 
+// const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+// const obj = JSON.parse(text, function (key, value) {
+//   if (key == "birth") {
+//     return new Date(value);
+//   } else {
+//     return value;
+//   }
+// });
+
+
+
 let jsonData = {};
 
 fetch("./tableau.json")
@@ -10,7 +20,8 @@ fetch("./tableau.json")
     console.log('jsonData',jsonData);
 });
 
-
+let tableau = sessionStorage.getItem("tableau")
+console.log("tableau", JSON.parse(tableau));
 
 document.getElementById("form").addEventListener("submit", function(event){
   
@@ -29,13 +40,15 @@ document.getElementById("form").addEventListener("submit", function(event){
             adresse: adresseValid
         }
         console.log("data", data);
-        sessionStorage.setItem("tableau", data);
+        // let newData = [JSON.parse(tableau),data];
+        console.log("newData", JSON.parse(tableau),data);
+
+        // sessionStorage.setItem("tableau",JSON.stringify(data));
        
     }
     let tableau = sessionStorage.getItem("tableau")
 
-   
-    console.log("tableau", typeof(tableau));
+    console.log("tableau", tableau);
     console.log(formData.get('avatar'));
     event.preventDefault();
   });

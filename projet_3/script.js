@@ -24,15 +24,15 @@ let tableau = sessionStorage.getItem("tableau")
 console.log("tableau", JSON.parse(tableau));
 
 document.getElementById("form").addEventListener("submit", function(event){
-  
-
-    var formData = new FormData(document.querySelector('form'))
+    var formData = new FormData(document.querySelector('form'));
+    
     let prenomValid = formData.get('prenom');
     let nomValid = formData.get('nom');
     let telephoneValid = formData.get('tel');
     let adresseValid = formData.get('adresse');
+
     if(prenomValid !== "" && nomValid !== "" && telephoneValid !== "" && adresseValid !== ""){
-        console.log("prenom valide", prenomValid);
+
         let data = {
             prenom: prenomValid,
             nom: nomValid,
@@ -45,6 +45,17 @@ document.getElementById("form").addEventListener("submit", function(event){
 
         // sessionStorage.setItem("tableau",JSON.stringify(data));
        
+    }else{
+        // document.getElementById("prenom").value = "Johnny Bravo";
+        if(nomValid === ""){
+            document.getElementById("obl-nom").innerText = "*Obligatoire";
+            document.getElementById("obl-nom").style.color = "red";
+        }
+        if(prenomValid === ""){
+            document.getElementById("obl-prenom").innerText = "*Obligatoire";
+            document.getElementById("obl-prenom").style.color = "red";
+        }
+
     }
     let tableau = sessionStorage.getItem("tableau")
 

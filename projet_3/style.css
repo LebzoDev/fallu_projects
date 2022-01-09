@@ -60,8 +60,8 @@ main{
 .formulaire-section{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-wrap: wrap; 
+    gap: 30px; 
     margin-top: 4vh;
 }
 .field{
@@ -165,6 +165,7 @@ input:focus{
 
 @media screen and (max-width: 1068px) {
     body{
+        /* #viewportWeight */
         width: 100vw;
     }
     footer{
